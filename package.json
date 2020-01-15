@@ -1,5 +1,5 @@
 {
-  "name": "monkey-chunky-stage-3:-teacher-reference",
+  "name": "monkey-chunky-stage-4",
   "version": "0.0.0",
   "description": "No description",
   "author": null,
@@ -12,8 +12,8 @@
     "expo": "^36.0.0",
     "react": "16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.1.tar.gz",
-    "expo-av": "8.0.0",
     "react-native-paper": "3.1.1",
+    "expo-av": "8.0.0",
     "react-native-elements": "1.2.7"
   }
 }
