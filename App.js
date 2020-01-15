@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { Header } from 'react-native-elements';
 import db from './localdb';
+import PhonicSoundButton from './components/PhonicSoundButton';
 
 export default class App extends React.Component {
   constructor() {
@@ -16,6 +17,7 @@ export default class App extends React.Component {
     this.state = {
       text: '',
       chunks: [],
+      phonicSounds: [],
     };
   }
   render() {
@@ -48,18 +50,18 @@ export default class App extends React.Component {
           style={styles.goButton}
           onPress={() => {
             this.setState({ chunks: db[this.state.text].chunks });
+            this.setState({ phonicSounds: db[this.state.text].phones });
           }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
         <View>
-          {this.state.chunks.map(item => {
+          {this.state.chunks.map((item, index) => {
             return (
-              <TouchableOpacity
-              style={styles.chunkButton}
-              >
-              <Text style={styles.displayText}>{item}</Text>
-              </TouchableOpacity>
-              );
+              <PhonicSoundButton
+                wordChunk={this.state.chunks[index]}
+                soundChunk={this.state.phonicSounds[index]}
+              />
+            );
           })}
         </View>
       </View>
@@ -93,24 +95,9 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
   },
-  displayText: {
-    textAlign: 'center',
-    fontSize: 30,
-    color: 'white'
-  },
   imageIcon: {
     width: 150,
     height: 150,
     marginLeft: 95,
-  },
-  chunkButton:{
-    width: '60%',
-    height: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
-    alignSelf: 'center',
-    borderRadius: 10,
-    margin: 5,
-    backgroundColor: 'red'
   }
 });
