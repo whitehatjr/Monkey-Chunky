@@ -6,7 +6,7 @@ import {
   TextInput,
   TouchableOpacity,
   Image,
-  Alert
+  Alert,
 } from 'react-native';
 import { Header } from 'react-native-elements';
 import db from './localdb';
@@ -95,10 +95,11 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     padding: 10,
     margin: 10,
+    borderRadius : 20,
   },
   buttonText: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 50,
     fontWeight: 'bold',
   },
   imageIcon: {
