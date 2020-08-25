@@ -55,7 +55,7 @@ export default class App extends React.Component {
             this.setState({ chunks: db[word].chunks }),
             this.setState({ phonicSounds: db[word].phones })
             ):
-            Alert.alert("The word does not exist ");
+            Alert.alert("The word does not exist in out db ");
           }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
