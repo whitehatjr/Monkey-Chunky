@@ -43,7 +43,7 @@ export default class App extends React.Component {
         <TextInput
           style={styles.inputBox}
           onChangeText={text => {
-            this.setState({ text: text });
+            this.setState({ text: text, chunks: [] });
           }}
           value={this.state.text}
         />
