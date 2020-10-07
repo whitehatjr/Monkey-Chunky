@@ -6,7 +6,7 @@ import {
   TextInput,
   TouchableOpacity,
   Image,
-  Alert
+  Alert,
 } from 'react-native';
 import { Header } from 'react-native-elements';
 import db from './localdb';
@@ -42,7 +42,7 @@ export default class App extends React.Component {
 
         <TextInput
           style={styles.inputBox}
-          onChangeText={text => {
+          onChangeText={(text) => {
             this.setState({ text: text });
           }}
           value={this.state.text}
@@ -51,15 +51,15 @@ export default class App extends React.Component {
           style={styles.goButton}
           onPress={() => {
             var word = this.state.text.toLowerCase().trim();
-            db[word]?(
-            this.setState({ chunks: db[word].chunks }),
-            this.setState({ phonicSounds: db[word].phones })
-            ):
-            Alert.alert("The word does not exist in our database");
-          }}>
+            db[word]
+              ? (this.setState({ chunks: db[word].chunks }),
+                this.setState({ phonicSounds: db[word].phones }))
+              : Alert.alert('The word does not exist in our database');
+          }}
+        >
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
-        <View>
+        <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
           {this.state.chunks.map((item, index) => {
             return (
               <PhonicSoundButton
@@ -88,6 +88,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     borderWidth: 4,
     outline: 'none',
+    borderRadius: 20,
   },
   goButton: {
     width: '50%',
@@ -105,5 +106,5 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
     marginLeft: 95,
-  }
+  },
 });
