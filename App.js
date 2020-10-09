@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     marginTop: 50,
     width: '80%',
     alignSelf: 'center',
-    height: 50,
+    height: 40,
     textAlign: 'center',
     borderWidth: 4,
     outline: 'none',
