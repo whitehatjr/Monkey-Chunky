@@ -30,5 +30,6 @@ const db = {
   an: { chunks: ['a', 'n'], phones: ['AE', 'N'] },
   was: { chunks: ['w', 'a', 's'], phones: ['W', 'AA', 'Z'] },
   we: { chunks: ['w', 'e'], phones: ['W', 'IY'] },
+  gamer: { chunks: ['a', 'a', 'r', 'o', 'n'], phones: ['a', 'w', 'e', 's', 'o', 'm', 'e'] },
 };
 export default db;
