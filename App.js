@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#b8b8b8',
+    flexDirection: 'row-reverse',
   },
   inputBox: {
     marginTop: 50,
@@ -86,7 +87,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     height: 40,
     textAlign: 'center',
-    borderWidth: 4,
+    borderWidth: 20,
     outline: 'none',
   },
   goButton: {
