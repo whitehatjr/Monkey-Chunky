@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#b8b8b8',
   },
   inputBox: {
-    marginTop: 50,
+    marginTop: 40,
     width: '80%',
     alignSelf: 'center',
     height: 40,
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 34,
     fontWeight: 'bold',
   },
   imageIcon: {
