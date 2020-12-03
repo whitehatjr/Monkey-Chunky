@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PhonicSoundButton from './components/PhonicSoundButton'
 import {
   Text,
   View,
@@ -6,12 +7,9 @@ import {
   TextInput,
   TouchableOpacity,
   Image,
-  Alert
 } from 'react-native';
 import { Header } from 'react-native-elements';
 import db from './localdb';
-import PhonicSoundButton from './components/PhonicSoundButton';
-
 export default class App extends React.Component {
   constructor() {
     super();
@@ -25,51 +23,46 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Header
-          backgroundColor={'#9c8210'}
+          backgroundColor={'orange'}
           centerComponent={{
             text: 'Monkey Chunky',
-            style: { color: '#fff', fontSize: 20 },
+            style: { color: '#000000', fontSize: 25 },
           }}
         />
-
         <Image
-          style={styles.imageIcon}
+          style={styles.image}
           source={{
             uri:
               'https://www.shareicon.net/data/128x128/2015/08/06/80805_face_512x512.png',
           }}
         />
-
         <TextInput
-          style={styles.inputBox}
-          onChangeText={text => {
-            this.setState({ text: text });
+          style={styles.text}
+          placeholder="Enter the word"
+          onChangeText={(t) => {
+            this.setState({ text: t });
           }}
           value={this.state.text}
         />
         <TouchableOpacity
-          style={styles.goButton}
+          style={styles.button}
           onPress={() => {
-            var word = this.state.text.toLowerCase().trim();
+            var word = this.state.text.toLowerCase().trim()
             db[word]?(
             this.setState({ chunks: db[word].chunks }),
             this.setState({ phonicSounds: db[word].phones })
-            ):
-            Alert.alert("The word does not exist in our database");
+            ):(
+              this.setState({chunks:[]}),
+              alert("Word does not exist")
+              )
           }}>
-          <Text style={styles.buttonText}>GO</Text>
+          <Text>FIND</Text>
         </TouchableOpacity>
-        <View>
-          {this.state.chunks.map((item, index) => {
-            return (
-              <PhonicSoundButton
-                wordChunk={this.state.chunks[index]}
-                soundChunk={this.state.phonicSounds[index]}
-                buttonIndex={index}
-              />
-            );
-          })}
-        </View>
+        {this.state.chunks.map((i,index) => {
+          return (
+            <PhonicSoundButton wordChunk={this.state.chunks[index]} soundChunk={this.state.phonicSounds[index]} />
+          );
+        })}
       </View>
     );
   }
@@ -80,30 +73,45 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#b8b8b8',
   },
-  inputBox: {
+  text: {
+    fontSize: 15,
+    alignSelf: 'center',
+    borderColor: 'black',
+    borderRadius: 5,
+    borderWidth: 5,
     marginTop: 50,
-    width: '80%',
-    alignSelf: 'center',
-    height: 40,
-    textAlign: 'center',
-    borderWidth: 4,
-    outline: 'none',
   },
-  goButton: {
-    width: '50%',
-    height: 55,
+  button: {
     alignSelf: 'center',
-    padding: 10,
+    backgroundColor: 'orange',
+    fontSize: 40,
+    margin: 10,
+    width: 80,
+    height: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  button2: {
+    alignSelf: 'center',
+    backgroundColor: 'red',
+    fontSize: 30,
+    borderRadius: 5,
+    margin: 10,
+    width: 50,
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text1: {
+    fontSize: 35,
+    alignSelf: 'center',
+    color: 'black',
     margin: 10,
   },
-  buttonText: {
-    textAlign: 'center',
-    fontSize: 30,
-    fontWeight: 'bold',
+  image: {
+    width: 100,
+    height: 100,
+    alignSelf: 'center',
+    marginTop: 20,
   },
-  imageIcon: {
-    width: 150,
-    height: 150,
-    marginLeft: 95,
-  }
 });
