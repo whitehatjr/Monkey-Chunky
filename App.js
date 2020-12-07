@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   Text,
   View,
@@ -6,17 +6,17 @@ import {
   TextInput,
   TouchableOpacity,
   Image,
-  Alert
-} from 'react-native';
-import { Header } from 'react-native-elements';
-import db from './localdb';
-import PhonicSoundButton from './components/PhonicSoundButton';
+  Alert,
+} from "react-native";
+import { Header } from "react-native-elements";
+import db from "./localdb";
+import PhonicSoundButton from "./components/PhonicSoundButton";
 
 export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      text: '',
+      text: "",
       chunks: [],
       phonicSounds: [],
     };
@@ -25,10 +25,10 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Header
-          backgroundColor={'#9c8210'}
+          backgroundColor={"#9c8210"}
           centerComponent={{
-            text: 'Monkey Chunky',
-            style: { color: '#fff', fontSize: 20 },
+            text: "Monkey Chunky",
+            style: { color: "#fff", fontSize: 20 },
           }}
         />
 
@@ -36,13 +36,13 @@ export default class App extends React.Component {
           style={styles.imageIcon}
           source={{
             uri:
-              'https://www.shareicon.net/data/128x128/2015/08/06/80805_face_512x512.png',
+              "https://www.shareicon.net/data/128x128/2015/08/06/80805_face_512x512.png",
           }}
         />
 
         <TextInput
           style={styles.inputBox}
-          onChangeText={text => {
+          onChangeText={(text) => {
             this.setState({ text: text });
           }}
           value={this.state.text}
@@ -51,15 +51,15 @@ export default class App extends React.Component {
           style={styles.goButton}
           onPress={() => {
             var word = this.state.text.toLowerCase().trim();
-            db[word]?(
-            this.setState({ chunks: db[word].chunks }),
-            this.setState({ phonicSounds: db[word].phones })
-            ):
-            Alert.alert("The word does not exist in our database");
-          }}>
+            db[word]
+              ? (this.setState({ chunks: db[word].chunks }),
+                this.setState({ phonicSounds: db[word].phones }))
+              : Alert.alert("The word does not exist in our database");
+          }}
+        >
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
-        <View>
+        <View style={{ flexDirection: "row", alignSelf: "center" }}>
           {this.state.chunks.map((item, index) => {
             return (
               <PhonicSoundButton
@@ -78,32 +78,33 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#b8b8b8',
+    backgroundColor: "#b8b8b8",
   },
   inputBox: {
     marginTop: 50,
-    width: '80%',
-    alignSelf: 'center',
+    width: "80%",
+    alignSelf: "center",
     height: 40,
-    textAlign: 'center',
+    textAlign: "center",
     borderWidth: 4,
-    outline: 'none',
+    outline: "none",
+    borderRadius: 20,
   },
   goButton: {
-    width: '50%',
+    width: "50%",
     height: 55,
-    alignSelf: 'center',
+    alignSelf: "center",
     padding: 10,
     margin: 10,
   },
   buttonText: {
-    textAlign: 'center',
+    textAlign: "center",
     fontSize: 30,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   imageIcon: {
     width: 150,
     height: 150,
     marginLeft: 95,
-  }
+  },
 });
