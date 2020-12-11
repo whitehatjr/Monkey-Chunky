@@ -90,8 +90,8 @@ const styles = StyleSheet.create({
     outline: 'none',
   },
   goButton: {
-    width: '50%',
-    height: 55,
+    width: '100%',
+    height: 30,
     alignSelf: 'center',
     padding: 10,
     margin: 10,
