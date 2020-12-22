@@ -50,10 +50,10 @@ export default class App extends React.Component {
         <TouchableOpacity
           style={styles.goButton}
           onPress={() => {
-            var word = this.state.text.toLowerCase().trim();
-            db[word]?(
-            this.setState({ chunks: db[word].chunks }),
-            this.setState({ phonicSounds: db[word].phones })
+            var theword = this.state.text.toLowerCase().trim();
+            db[theword]?(
+            this.setState({ chunks: db[theword].chunks }),
+            this.setState({ phonicSounds: db[theword].phones })
             ):
             Alert.alert("The word does not exist in our database");
           }}>
