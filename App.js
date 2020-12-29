@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#b8b8b8',
   },
   inputBox: {
-    marginTop: 50,
+    marginTop: 40,
     width: '80%',
     alignSelf: 'center',
     height: 40,
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   },
   goButton: {
     width: '50%',
-    height: 55,
+    height: 50,
     alignSelf: 'center',
     padding: 10,
     margin: 10,
