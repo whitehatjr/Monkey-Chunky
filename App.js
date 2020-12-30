@@ -8,6 +8,7 @@ import {
   Image,
   Alert
 } from 'react-native';
+
 import { Header } from 'react-native-elements';
 import db from './localdb';
 import PhonicSoundButton from './components/PhonicSoundButton';
@@ -78,7 +79,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#b8b8b8',
+    backgroundColor: '#ffffff',
   },
   inputBox: {
     marginTop: 50,
@@ -95,6 +96,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     padding: 10,
     margin: 10,
+    backgroundColor: 'tomato',
   },
   buttonText: {
     textAlign: 'center',
