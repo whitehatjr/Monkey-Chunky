@@ -79,14 +79,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#b8b8b8',
+    flexDirection: 'row-reverse',
   },
   inputBox: {
     marginTop: 50,
-    width: '80%',
+    width: '100%',
     alignSelf: 'center',
-    height: 40,
+    height: 700,
     textAlign: 'center',
-    borderWidth: 4,
+    borderWidth: 20,
     outline: 'none',
   },
   goButton: {
