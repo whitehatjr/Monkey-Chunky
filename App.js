@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     marginTop: 50,
     width: '80%',
     alignSelf: 'center',
-    height: 40,
+    height: 50,
     textAlign: 'center',
     borderWidth: 4,
     outline: 'none',
@@ -95,6 +95,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     padding: 10,
     margin: 10,
+    borderRadius: 20,
   },
   buttonText: {
     textAlign: 'center',
