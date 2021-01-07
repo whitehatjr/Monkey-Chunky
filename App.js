@@ -15,7 +15,7 @@ import PhonicSoundButton from './components/PhonicSoundButton';
 export default class App extends React.Component {
   constructor() {
     super();
-	//Comment
+	console.log("Monkey Chunkey App");
     this.state = {
       text: '',
       chunks: [],
