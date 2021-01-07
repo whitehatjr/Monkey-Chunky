@@ -44,6 +44,7 @@ export default class App extends React.Component {
           style={styles.inputBox}
           onChangeText={text => {
             this.setState({ text: text });
+            console.log("This is a change. - Jeremy")
           }}
           value={this.state.text}
         />
