@@ -55,11 +55,12 @@ export default class App extends React.Component {
             this.setState({ chunks: db[word].chunks }),
             this.setState({ phonicSounds: db[word].phones })
             ):
-            Alert.alert("The word does not exist in our database");
+            Alert.alert("This word does not exist in our database");
           }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
-        <View>
+        <View style ={{flexDirection:'row',
+                       alignSelf: 'center'}}>
           {this.state.chunks.map((item, index) => {
             return (
               <PhonicSoundButton
