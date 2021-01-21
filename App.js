@@ -99,11 +99,11 @@ const styles = StyleSheet.create({
   buttonText: {
     textAlign: 'center',
     fontSize: 30,
-    fontWeight: 'bold',
+    fontWeight: 'italic',
   },
   imageIcon: {
-    width: 150,
+    width: 100,
     height: 150,
-    marginLeft: 95,
+    marginLeft: 100,
   }
 });
