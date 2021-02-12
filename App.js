@@ -41,7 +41,7 @@ export default class App extends React.Component {
         />
 
         <TextInput
-          style={styles.inputBox}
+          style=[styles.inputBox}
           onChangeText={text => {
             this.setState({ text: text });
           }}
@@ -88,6 +88,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     borderWidth: 4,
     outline: 'none',
+    borderRadius:20,
   },
   goButton: {
     width: '50%',
