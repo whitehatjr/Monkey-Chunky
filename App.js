@@ -25,10 +25,10 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Header
-          backgroundColor={'#9c8210'}
+          backgroundColor={'blue'}
           centerComponent={{
-            text: 'Monkey Chunky',
-            style: { color: '#fff', fontSize: 20 },
+            text: 'Chunky Monkey',
+            style: { color: 'red', fontSize: 40 },
           }}
         />
 
@@ -55,9 +55,9 @@ export default class App extends React.Component {
             this.setState({ chunks: db[word].chunks }),
             this.setState({ phonicSounds: db[word].phones })
             ):
-            Alert.alert("The word does not exist in our database");
+            Alert.alert("The word does exist in our database");
           }}>
-          <Text style={styles.buttonText}>GO</Text>
+          <Text style={styles.buttonText}>DONT GO</Text>
         </TouchableOpacity>
         <View>
           {this.state.chunks.map((item, index) => {
@@ -78,32 +78,32 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#b8b8b8',
+    backgroundColor: 'yellow',
   },
   inputBox: {
-    marginTop: 50,
-    width: '80%',
+    marginTop: 40,
+    width: '90%',
     alignSelf: 'center',
-    height: 40,
+    height: 50,
     textAlign: 'center',
-    borderWidth: 4,
+    borderWidth: 6,
     outline: 'none',
   },
   goButton: {
-    width: '50%',
+    width: '60%',
     height: 55,
     alignSelf: 'center',
-    padding: 10,
-    margin: 10,
+    padding: 5,
+    margin: 15,
   },
   buttonText: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 40,
     fontWeight: 'bold',
   },
   imageIcon: {
-    width: 150,
-    height: 150,
-    marginLeft: 95,
+    width: 200,
+    height: 200,
+    marginLeft: 105,
   }
 });
