@@ -1,7 +1,7 @@
 {
   "name": "monkey-chunky-stage-4",
-  "version": "0.0.0",
-  "description": "No description",
+  "version": "1.0.0",
+  "description": "This app helps to pronounce different words.",
   "author": null,
   "private": true,
   "main": "node_modules/expo/AppEntry.js",
