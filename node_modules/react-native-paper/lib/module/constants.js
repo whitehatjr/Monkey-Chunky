@@ -1,0 +1,2 @@
+import{Platform}from'react-native';var expo=global.__expo;var DEFAULT_STATUSBAR_HEIGHT_EXPO=expo&&expo.Constants?expo.Constants.statusBarHeight:0;export var APPROX_STATUSBAR_HEIGHT=Platform.select({android:DEFAULT_STATUSBAR_HEIGHT_EXPO,ios:Platform.Version<11?DEFAULT_STATUSBAR_HEIGHT_EXPO:0});
+//# sourceMappingURL=constants.js.map

@@ -1,0 +1,2 @@
+import*as React from'react';import MaterialCommunityIcon from'../components/MaterialCommunityIcon';var _React$createContext=React.createContext({icon:MaterialCommunityIcon}),Provider=_React$createContext.Provider,Consumer=_React$createContext.Consumer;export{Provider,Consumer};
+//# sourceMappingURL=settings.js.map
