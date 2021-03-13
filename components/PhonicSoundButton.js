@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
   chunkButton:{
     width: '60%',
     height: 50,
+    borderRadius:50,
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
