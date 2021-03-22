@@ -1,3 +1,3 @@
-# Monkey Chunky App
+# Monkey Chunky
 
-Monkey Chunky App is designed to help early stage readers practice reading words. The user can enter any word and the app will break it down into phonic chunks. User can tap on the phonic chunks to hear the corresponding sound of the phones that make the word.
+Monkey Chunky is a app which is made for small children.It helps to under stand the phonic sounds of some selected words 
