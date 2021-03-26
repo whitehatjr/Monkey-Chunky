@@ -10,8 +10,8 @@ import {
 } from 'react-native';
 import { Header } from 'react-native-elements';
 import db from './localdb';
-import PhonicSoundButton from './components/PhonicSoundButton';
 
+import PhonicSoundButton from './components/PhonicSoundButton'
 export default class App extends React.Component {
   constructor() {
     super();
@@ -78,8 +78,8 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#b8b8b8',
-  },
+    backgroundColor: '#bcf32d'
+  }, 
   inputBox: {
     marginTop: 50,
     width: '80%',
