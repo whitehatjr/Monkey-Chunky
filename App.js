@@ -27,8 +27,8 @@ export default class App extends React.Component {
         <Header
           backgroundColor={'#9c8210'}
           centerComponent={{
-            text: 'Monkey Chunky',
-            style: { color: '#fff', fontSize: 20 },
+            text: 'Monkey Chunky By Vedant',
+            style: { color: '#fff12', fontSize: 20 },
           }}
         />
 
