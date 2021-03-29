@@ -9,8 +9,6 @@ import {
   Alert,
 } from "react-native";
 
-import Speech from "expo-speech";
-
 import db from "./localdb";
 
 import Header from "./components/Header";
@@ -62,7 +60,6 @@ export default class App extends React.Component {
                 this.setState({ phonicSounds: db[word].phones }))
               : Alert.alert("This word does not exist in our database");
             goPressed = true;
-            //Speech.speak(this.state.text);
           }}
         >
           <Text style={styles.buttonText}>GO</Text>
