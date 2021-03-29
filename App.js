@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   Text,
   View,
@@ -6,43 +6,47 @@ import {
   TextInput,
   TouchableOpacity,
   Image,
-  Alert
-} from 'react-native';
-import { Header } from 'react-native-elements';
-import db from './localdb';
-import PhonicSoundButton from './components/PhonicSoundButton';
+  Alert,
+} from "react-native";
+
+import db from "./localdb";
+
+import Header from "./components/Header";
+import PhonicSoundButton from "./components/PhonicSoundButton";
+
+var goPressed = false;
 
 export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      text: '',
+      text: "",
       chunks: [],
       phonicSounds: [],
     };
   }
+
+  componentDidMount() {
+    setInterval(() => {
+      goPressed = false;
+    }, 1);
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Header
-          backgroundColor={'#9c8210'}
-          centerComponent={{
-            text: 'Monkey Chunky',
-            style: { color: '#fff', fontSize: 20 },
-          }}
-        />
-
+        <Header color="white" lineColor="grey" />
         <Image
           style={styles.imageIcon}
           source={{
             uri:
-              'https://www.shareicon.net/data/128x128/2015/08/06/80805_face_512x512.png',
+              "https://www.shareicon.net/data/128x128/2015/08/06/80805_face_512x512.png",
           }}
         />
 
         <TextInput
           style={styles.inputBox}
-          onChangeText={text => {
+          onChangeText={(text) => {
             this.setState({ text: text });
           }}
           value={this.state.text}
@@ -51,23 +55,29 @@ export default class App extends React.Component {
           style={styles.goButton}
           onPress={() => {
             var word = this.state.text.toLowerCase().trim();
-            db[word]?(
-            this.setState({ chunks: db[word].chunks }),
-            this.setState({ phonicSounds: db[word].phones })
-            ):
-            Alert.alert("The word does not exist in our database");
-          }}>
+            db[word]
+              ? (this.setState({ chunks: db[word].chunks }),
+                this.setState({ phonicSounds: db[word].phones }))
+              : Alert.alert("This word does not exist in our database");
+            goPressed = true;
+          }}
+        >
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
         <View>
           {this.state.chunks.map((item, index) => {
-            return (
-              <PhonicSoundButton
-                wordChunk={this.state.chunks[index]}
-                soundChunk={this.state.phonicSounds[index]}
-                buttonIndex={index}
-              />
-            );
+            if (goPressed) {
+              return (
+                <PhonicSoundButton
+                  wordChunk={this.state.chunks[index]}
+                  soundChunk={this.state.phonicSounds[index]}
+                  buttonIndex={index}
+                  goPressed={goPressed}
+                />
+              );
+            } else {
+              return null;
+            }
           })}
         </View>
       </View>
@@ -78,32 +88,34 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#b8b8b8',
+    backgroundColor: "white",
   },
   inputBox: {
     marginTop: 50,
-    width: '80%',
-    alignSelf: 'center',
+    width: "75%",
+    alignSelf: "center",
     height: 40,
-    textAlign: 'center',
-    borderWidth: 4,
-    outline: 'none',
+    textAlign: "center",
+    backgroundColor: "#e5e5e5",
+    fontSize: 18,
+    borderRadius: 15,
   },
   goButton: {
-    width: '50%',
+    width: "50%",
     height: 55,
-    alignSelf: 'center',
+    alignSelf: "center",
     padding: 10,
     margin: 10,
   },
   buttonText: {
-    textAlign: 'center',
+    textAlign: "center",
     fontSize: 30,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   imageIcon: {
-    width: 150,
-    height: 150,
-    marginLeft: 95,
-  }
+    marginTop: "20%",
+    width: 170,
+    height: 170,
+    alignSelf: "center",
+  },
 });
