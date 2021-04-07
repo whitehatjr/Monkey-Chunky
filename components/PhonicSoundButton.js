@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
     width: '60%',
     height: 50,
     justifyContent: 'center',
+    flexDirection: 'horizontal',
     alignItems: 'center',
     alignSelf: 'center',
     borderRadius: 10,
