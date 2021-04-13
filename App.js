@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     width: '80%',
     alignSelf: 'center',
     height: 40,
-    textAlign: 'center',
+    textAlign: 'left',
     borderWidth: 4,
     outline: 'none',
   },
