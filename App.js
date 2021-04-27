@@ -59,6 +59,7 @@ export default class App extends React.Component {
           }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
+        <View style = {{flexDirection:"row",alignSelf:"center"}}>
         <View>
           {this.state.chunks.map((item, index) => {
             return (
@@ -69,6 +70,7 @@ export default class App extends React.Component {
               />
             );
           })}
+        </View>
         </View>
       </View>
     );
@@ -84,6 +86,7 @@ const styles = StyleSheet.create({
     marginTop: 50,
     width: '80%',
     alignSelf: 'center',
+    borderRadius: 20,
     height: 40,
     textAlign: 'center',
     borderWidth: 4,
