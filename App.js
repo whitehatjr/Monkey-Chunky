@@ -19,6 +19,7 @@ export default class App extends React.Component {
       text: '',
       chunks: [],
       phonicSounds: [],
+      soundd:[],
     };
   }
   render() {
