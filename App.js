@@ -42,6 +42,8 @@ export default class App extends React.Component {
 
         <TextInput
           style={styles.inputBox}
+          placeHolder="Type it here"
+
           onChangeText={text => {
             this.setState({ text: text });
           }}
@@ -81,20 +83,28 @@ const styles = StyleSheet.create({
     backgroundColor: '#b8b8b8',
   },
   inputBox: {
-    marginTop: 50,
-    width: '80%',
-    alignSelf: 'center',
-    height: 40,
-    textAlign: 'center',
-    borderWidth: 4,
-    outline: 'none',
+    color:'red',
+marginTop:50,
+width:250,
+height:40,
+alignSelf:'center',
+textAlign:'center',
+borderColor:'black',
+borderWidth:5,
+fontFamily:'cursive',
   },
   goButton: {
-    width: '50%',
-    height: 55,
-    alignSelf: 'center',
-    padding: 10,
-    margin: 10,
+    backgroundColor:'red',
+    color:'white',
+  marginTop:50,
+  width:80,
+  height:40,
+  alignSelf:'center',
+  textAlign:'center',
+  borderColor:'black',
+  borderWidth:2,
+  fontFamily:'cursive',
+  fontSize:18
   },
   buttonText: {
     textAlign: 'center',
@@ -102,8 +112,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   imageIcon: {
-    width: 150,
-    height: 150,
-    marginLeft: 95,
+    width:80,
+    height:80,
+  alignSelf:'center'
   }
 });
