@@ -96,15 +96,16 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     padding: 10,
     margin: 10,
+   
   },
   buttonText: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 60,
     fontWeight: 'bold',
   },
   imageIcon: {
     width: 150,
     height: 150,
-    marginLeft: 95,
+    marginLeft: 90,
   }
 });
