@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
   buttonText: {
     textAlign: 'center',
     fontSize: 60,
-    fontWeight: 'bold',
+    
   },
   imageIcon: {
     width: 150,
