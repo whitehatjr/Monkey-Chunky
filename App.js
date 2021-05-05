@@ -25,7 +25,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Header
-          backgroundColor={'#9c8210'}
+          backgroundColor={'#9c8948'}
           centerComponent={{
             text: 'Monkey Chunky',
             style: { color: '#fff', fontSize: 20 },
@@ -78,10 +78,10 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#b8b8b8',
+    backgroundColor: '#b8ic48',
   },
   inputBox: {
-    marginTop: 50,
+    marginTop: 45,
     width: '80%',
     alignSelf: 'center',
     height: 40,
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 20,
     fontWeight: 'bold',
   },
   imageIcon: {
