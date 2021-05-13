@@ -59,7 +59,7 @@ export default class App extends React.Component {
           }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
-        <View>
+        {this.state.text === undefined ? (<Text>Word Not Found</Text>):(<View>
           {this.state.chunks.map((item, index) => {
             return (
               <PhonicSoundButton
@@ -69,7 +69,7 @@ export default class App extends React.Component {
               />
             );
           })}
-        </View>
+        </View>)}
       </View>
     );
   }
