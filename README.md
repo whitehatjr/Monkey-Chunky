@@ -4,3 +4,5 @@ Monkey Chunky App is designed to help early stage readers practice reading words
 It is a wondeful app
 It chunks words and helps us
 Its very useful
+
+excellent
