@@ -44,6 +44,10 @@ export default class App extends React.Component {
           style={styles.inputBox}
           onChangeText={text => {
             this.setState({ text: text });
+          this.setState({
+              chunks:[],
+              phonicSounds:[],
+            })
           }}
           value={this.state.text}
         />
@@ -59,7 +63,7 @@ export default class App extends React.Component {
           }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
-        <View>
+        <View style = {{flexDirection:'row', alignSelf:'center'}}>
           {this.state.chunks.map((item, index) => {
             return (
               <PhonicSoundButton
@@ -88,6 +92,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     borderWidth: 4,
     outline: 'none',
+    borderRadius: 20,
   },
   goButton: {
     width: '50%',
