@@ -58,8 +58,9 @@ export default class App extends React.Component {
             Alert.alert("The word does not exist in our database");
           }}>
           <Text style={styles.buttonText}>GO</Text>
+
         </TouchableOpacity>
-        <View>
+        <View style={{flexDirection:"row", alignSelf:'center'}}>
           {this.state.chunks.map((item, index) => {
             return (
               <PhonicSoundButton
