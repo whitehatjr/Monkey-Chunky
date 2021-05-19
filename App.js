@@ -69,6 +69,7 @@ export default class App extends React.Component {
               />
             );
           })}
+          
         </View>
       </View>
     );
