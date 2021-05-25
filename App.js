@@ -28,15 +28,7 @@ export default class App extends React.Component {
           backgroundColor={'#9c8210'}
           centerComponent={{
             text: 'Monkey Chunky',
-            style: { color: '#fff', fontSize: 20 },
-          }}
-        />
-
-        <Image
-          style={styles.imageIcon}
-          source={{
-            uri:
-              'https://www.shareicon.net/data/128x128/2015/08/06/80805_face_512x512.png',
+            style: { color: 'grey', fontSize: 21, fontWeight: 'bold', },
           }}
         />
 
@@ -77,16 +69,14 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#b8b8b8',
   },
   inputBox: {
     marginTop: 50,
     width: '80%',
-    alignSelf: 'center',
     height: 40,
     textAlign: 'center',
-    borderWidth: 4,
+    borderWidth: 2,
     outline: 'none',
   },
   goButton: {
@@ -100,10 +90,5 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 30,
     fontWeight: 'bold',
-  },
-  imageIcon: {
-    width: 150,
-    height: 150,
-    marginLeft: 95,
   }
 });
