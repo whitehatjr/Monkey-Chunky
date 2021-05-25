@@ -13,6 +13,7 @@ import db from './localdb';
 import PhonicSoundButton from './components/PhonicSoundButton';
 
 export default class App extends React.Component {
+  //Constructor
   constructor() {
     super();
     this.state = {
@@ -39,7 +40,7 @@ export default class App extends React.Component {
               'https://www.shareicon.net/data/128x128/2015/08/06/80805_face_512x512.png',
           }}
         />
-
+//Text Input
         <TextInput
           style={styles.inputBox}
           onChangeText={text => {
@@ -57,9 +58,9 @@ export default class App extends React.Component {
             ):
             Alert.alert("The word does not exist in our database");
           }}>
-          <Text style={styles.buttonText}>GO</Text>
+          <Text style={styles.buttonText}>GO!</Text>
         </TouchableOpacity>
-        <View>
+        <View style = {{flexDirection:"row",alignSelf:"center"}}>
           {this.state.chunks.map((item, index) => {
             return (
               <PhonicSoundButton
@@ -88,6 +89,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     borderWidth: 4,
     outline: 'none',
+    borderRadius:20
   },
   goButton: {
     width: '50%',
