@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     borderRadius: 10,
     margin: 5,
-    backgroundColor: 'red'
+    backgroundColor: 'red',
+    flexDirection:'row'
   }
 });
