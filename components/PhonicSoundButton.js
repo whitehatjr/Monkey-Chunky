@@ -29,7 +29,7 @@ export default class PhonicSoundButton extends React.Component {
         style={
           this.props.buttonIndex === this.state.pressButtonIndex
                       ? [styles.chunkButton, { backgroundColor: 'white' }]
-                      : [styles.chunkButton, { backgroundColor: 'red' }]
+                      : [styles.chunkButton, { backgroundColor: 'orange' }]
           }
         onPress={() => {
           this.setState({ pressButtonIndex: this.props.buttonIndex });
