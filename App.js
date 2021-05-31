@@ -6,7 +6,7 @@ import {
   TextInput,
   TouchableOpacity,
   Image,
-  Alert
+  Alert,Button,
 } from 'react-native';
 import { Header } from 'react-native-elements';
 import db from './localdb';
@@ -88,14 +88,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     borderWidth: 4,
     outline: 'none',
-    broderRadius:20,
+    broderRadius:30,
   },
   goButton: {
     width: '50%',
     height: 55,
     alignSelf: 'center',
     padding: 10,
-    margin: 10,
+    margin: 20,
   },
   buttonText: {
     textAlign: 'center',
