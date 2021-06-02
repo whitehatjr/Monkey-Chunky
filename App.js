@@ -1,109 +1,137 @@
 import * as React from 'react';
-import {
-  Text,
-  View,
-  StyleSheet,
-  TextInput,
-  TouchableOpacity,
-  Image,
-  Alert
-} from 'react-native';
-import { Header } from 'react-native-elements';
+import { Text, View, StyleSheet, TextInput, TouchableOpacity, Image, Alert} from 'react-native';
+import {Header} from 'react-native-elements';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 import db from './localdb';
-import PhonicSoundButton from './components/PhonicSoundButton';
+import * as Speech from 'expo-speech';
+import SoundButton from './components/soundbutton';
 
 export default class App extends React.Component {
-  constructor() {
+  constructor(){
     super();
     this.state = {
       text: '',
       chunks: [],
-      phonicSounds: [],
-    };
+      phones: [],
+    }
   }
+  speak =(texts)=> {
+    Speech.speak(texts);
+  };
+
+  componentDidUpdate(){
+    
+  }
+  resetButton=()=>{
+    this.setState({
+      text: '',
+      chunks: [],
+      phones: [],
+    })
+
+  }
+  
   render() {
     return (
-      <View style={styles.container}>
-        <Header
-          backgroundColor={'#9c8210'}
-          centerComponent={{
-            text: 'Monkey Chunky',
-            style: { color: '#fff', fontSize: 20 },
-          }}
-        />
+      <SafeAreaProvider>
+        <View style={styles.container}>
 
-        <Image
-          style={styles.imageIcon}
-          source={{
-            uri:
-              'https://www.shareicon.net/data/128x128/2015/08/06/80805_face_512x512.png',
-          }}
-        />
-
-        <TextInput
-          style={styles.inputBox}
-          onChangeText={text => {
-            this.setState({ text: text });
-          }}
+         <Header
+           backgroundColor = "blue"
+            centerComponent={{text: 'Monkey Chunky', style:{color: '#fff', fontSize: 20}}}
+          />
+          <Image style = {styles.logoImage} source={{uri:"https://www.shareicon.net/data/128x128/2015/08/06/80805_face_512x512.png"}}/>
+         <TextInput
+         style = {styles.inputbox}
+          onChangeText = {
+            text=>{
+              this.setState({
+                text: text.trim().toLocaleLowerCase()
+              })
+            }
+          }
           value={this.state.text}
-        />
-        <TouchableOpacity
-          style={styles.goButton}
-          onPress={() => {
-            var word = this.state.text.toLowerCase().trim();
-            db[word]?(
-            this.setState({ chunks: db[word].chunks }),
-            this.setState({ phonicSounds: db[word].phones })
-            ):
-            Alert.alert("The word does not exist in our database");
-          }}>
+          placeholder = "Enter a Word"
+          
+         />
+        
+        <TouchableOpacity style = {styles.buttonGo} onPress ={()=>{
+          db[this.state.text] ? (
+          this.setState({
+            chunks: db[this.state.text].chunks,}),
+            this.setState({
+            phones: db[this.state.text].phones
+          })
+          ): alert("The word does not exist");
+          console.log(db[this.state.text])
+        }}>
+
           <Text style={styles.buttonText}>GO</Text>
+
         </TouchableOpacity>
         <View>
-          {this.state.chunks.map((item, index) => {
-            return (
-              <PhonicSoundButton
-                wordChunk={this.state.chunks[index]}
-                soundChunk={this.state.phonicSounds[index]}
-                buttonIndex={index}
-              />
+          {this.state.chunks.map((item, index)=>{
+            return(
+                <SoundButton wordChunk={this.state.chunks[index]} word={this.state.phones[index]}/>
             );
           })}
+          
         </View>
-      </View>
+        <TouchableOpacity style={styles.resetbutton} onPress={()=>{
+          this.resetButton()
+        }}>
+            <Text style={styles.buttonText}>RESET</Text>
+        </TouchableOpacity>
+        </View>
+
+      </SafeAreaProvider>
+      
     );
   }
+
 }
 
 const styles = StyleSheet.create({
-  container: {
+ container: {
     flex: 1,
-    backgroundColor: '#b8b8b8',
+    backgroundColor: '#Ffffd5',
   },
-  inputBox: {
-    marginTop: 50,
-    width: '80%',
-    alignSelf: 'center',
-    height: 40,
-    textAlign: 'center',
-    borderWidth: 4,
+  inputbox: {
+    marginTop: 25,
+    width: 250,
+    height: 50,
+    alignSelf: "center",
     outline: 'none',
+    borderWidth: 2,
+    textAlign: "center"
   },
-  goButton: {
-    width: '50%',
-    height: 55,
+  buttonGo: {
     alignSelf: 'center',
-    padding: 10,
-    margin: 10,
+    width: 100,
+    height: 50,
+    backgroundColor: "#1C99EF",
+    alignItems: "center",
+    marginTop: 50,
+    borderRadius: 10
   },
   buttonText: {
-    textAlign: 'center',
-    fontSize: 30,
+    textAlign: "center",
+    fontSize: 25,
+    marginTop: 7,
     fontWeight: 'bold',
   },
-  imageIcon: {
-    width: 150,
+  logoImage: {
+    width: 150, 
     height: 150,
-    marginLeft: 95,
+    alignSelf: "center"
+  },
+  resetbutton: {
+    alignSelf: 'center',
+    width: 100,
+    height: 50,
+    backgroundColor: "#FC8185",
+    alignItems: "center",
+    marginTop: 80,
+    borderRadius: 10
   }
 });
