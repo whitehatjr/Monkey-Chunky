@@ -1,0 +1,2 @@
+import{createTheming}from'@callstack/react-theme-provider';import DefaultTheme from'../styles/DefaultTheme';var _createTheming=createTheming(DefaultTheme),ThemeProvider=_createTheming.ThemeProvider,withTheme=_createTheming.withTheme,useTheme=_createTheming.useTheme;export{ThemeProvider,withTheme,useTheme};
+//# sourceMappingURL=theming.js.map
