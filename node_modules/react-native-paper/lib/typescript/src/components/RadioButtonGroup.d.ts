@@ -1,0 +1,59 @@
+import * as React from 'react';
+declare type Props = {
+    /**
+     * Function to execute on selection change.
+     */
+    onValueChange: (value: string) => void;
+    /**
+     * Value of the currently selected radio button.
+     */
+    value: string;
+    /**
+     * React elements containing radio buttons.
+     */
+    children: React.ReactNode;
+};
+export declare type RadioButtonContextType = {
+    value: string;
+    onValueChange: (item: string) => void;
+};
+export declare const RadioButtonContext: React.Context<RadioButtonContextType>;
+/**
+ * Radio button group allows to control a group of radio buttons.
+ *
+ * ## Usage
+ * ```js
+ * import * as React from 'react';
+ * import { View } from 'react-native';
+ * import { RadioButton, Text } from 'react-native-paper';
+ *
+ * export default class MyComponent extends React.Component {
+ *   state = {
+ *     value: 'first',
+ *   };
+ *
+ *   render() {
+ *     return(
+ *       <RadioButton.Group
+ *         onValueChange={value => this.setState({ value })}
+ *         value={this.state.value}
+ *       >
+ *         <View>
+ *           <Text>First</Text>
+ *           <RadioButton value="first" />
+ *         </View>
+ *         <View>
+ *           <Text>Second</Text>
+ *           <RadioButton value="second" />
+ *         </View>
+ *       </RadioButton.Group>
+ *     )
+ *   }
+ * }
+ *```
+ */
+declare class RadioButtonGroup extends React.Component<Props> {
+    static displayName: string;
+    render(): JSX.Element;
+}
+export default RadioButtonGroup;
