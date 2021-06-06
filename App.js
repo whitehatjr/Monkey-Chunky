@@ -28,17 +28,12 @@ export default class App extends React.Component {
           backgroundColor={'#9c8210'}
           centerComponent={{
             text: 'Monkey Chunky',
-            style: { color: '#fff', fontSize: 20 },
+            style: { color: '#fff', fontSize: 30 },
           }}
         />
 
-        <Image
-          style={styles.imageIcon}
-          source={{
-            uri:
-              'https://www.shareicon.net/data/128x128/2015/08/06/80805_face_512x512.png',
-          }}
-        />
+
+     
 
         <TextInput
           style={styles.inputBox}
@@ -86,23 +81,23 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     height: 40,
     textAlign: 'center',
-    borderWidth: 4,
+    borderWidth: 10,
     outline: 'none',
   },
   goButton: {
     width: '50%',
-    height: 55,
+    height: 35,
     alignSelf: 'center',
     padding: 10,
     margin: 10,
   },
   buttonText: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 20,
     fontWeight: 'bold',
   },
   imageIcon: {
-    width: 150,
+    width: 100,
     height: 150,
     marginLeft: 95,
   }
