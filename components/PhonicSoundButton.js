@@ -52,13 +52,13 @@ const styles = StyleSheet.create({
     color: 'white'
   },
   chunkButton:{
-    width: '60%',
-    height: 50,
+    width: '70%',
+    height: 200,
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    borderRadius: 10,
-    margin: 5,
-    backgroundColor: 'red'
+    borderRadius: 12,
+    margin: 8,
+    backgroundColor: 'skyblue'
   }
 });
