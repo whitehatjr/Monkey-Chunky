@@ -6,71 +6,72 @@ import {
   TextInput,
   TouchableOpacity,
   Image,
-  Alert
+  Alert,
 } from 'react-native';
 import { Header } from 'react-native-elements';
-import db from './localdb';
-import PhonicSoundButton from './components/PhonicSoundButton';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import db from './locaalDb';
+import PhonicSoundButton from './components/phonic'
+
+
 
 export default class App extends React.Component {
   constructor() {
     super();
-    this.state = {
-      text: '',
-      chunks: [],
-      phonicSounds: [],
-    };
+    this.state = { text: '', displayText: '', chunks: [],  phones: [] };
   }
   render() {
     return (
-      <View style={styles.container}>
-        <Header
-          backgroundColor={'#9c8210'}
-          centerComponent={{
-            text: 'Monkey Chunky',
-            style: { color: '#fff', fontSize: 20 },
-          }}
-        />
+      <SafeAreaProvider>
+        <View style={styles.container}>
+          <Header
+            backgroundColor="orange"
+            centerComponent={{
+              text: 'Monkey-Chunky',
+              style: { fontSize: 22, fontWeight: 'bold' },
+            }}
+          />
 
-        <Image
-          style={styles.imageIcon}
-          source={{
-            uri:
-              'https://www.shareicon.net/data/128x128/2015/08/06/80805_face_512x512.png',
-          }}
-        />
+          <Image
+            style={styles.monkey}
+            source={require("./monkey.PNG")}
+          />
 
-        <TextInput
-          style={styles.inputBox}
-          onChangeText={text => {
-            this.setState({ text: text });
-          }}
-          value={this.state.text}
-        />
-        <TouchableOpacity
-          style={styles.goButton}
-          onPress={() => {
-            var word = this.state.text.toLowerCase().trim();
-            db[word]?(
-            this.setState({ chunks: db[word].chunks }),
-            this.setState({ phonicSounds: db[word].phones })
-            ):
-            Alert.alert("The word does not exist in our database");
-          }}>
-          <Text style={styles.buttonText}>GO</Text>
-        </TouchableOpacity>
-        <View>
-          {this.state.chunks.map((item, index) => {
-            return (
-              <PhonicSoundButton
-                wordChunk={this.state.chunks[index]}
-                soundChunk={this.state.phonicSounds[index]}
-                buttonIndex={index}
-              />
-            );
-          })}
+          <TextInput
+            placeholder="Enter Word"
+            style={styles.input}
+            onChangeText={(txt) => {
+              this.setState({ text: txt });
+              this.setState({chunks:[],phones:[]})
+            }}
+            value={this.state.text}
+          />
+          <TouchableOpacity
+            style={styles.iput}
+            onPress={() => {
+              var word = this.state.text.toLowerCase().trim();
+
+              db[word]? 
+              (this.setState({ chunks: db[word].chunks }),
+              this.setState({ phones: db[word].phones }))
+              :
+              Alert.alert("The word doesnt exist in the app")
+            }}>
+            <Text style={styles.f}> GO </Text>
+          </TouchableOpacity>
+          <View>
+            {this.state.chunks.map((item,index) => {
+              return (
+                <PhonicSoundButton
+                butonIndex = {index}
+                chunks = {this.state.chunks[index]}
+                phonic = {this.state.phones[index]}
+                />
+              );
+            })}
+          </View>
         </View>
-      </View>
+      </SafeAreaProvider>
     );
   }
 }
@@ -78,32 +79,40 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#b8b8b8',
+    backgroundColor: '#ffffff',
   },
-  inputBox: {
-    marginTop: 50,
-    width: '80%',
-    alignSelf: 'center',
+  input: {
     height: 40,
-    textAlign: 'center',
+    marginTop: 50,
     borderWidth: 4,
-    outline: 'none',
-  },
-  goButton: {
-    width: '50%',
-    height: 55,
     alignSelf: 'center',
-    padding: 10,
-    margin: 10,
+    width: '80%',
   },
-  buttonText: {
-    textAlign: 'center',
-    fontSize: 30,
-    fontWeight: 'bold',
+  iput: {
+    alignSelf: 'center',
+    marginTop: 30,
+    justifyContent: 'center',
+    backgroundColor: 'red',
+    width: 100,
+    height: 50,
+    borderRadius: 10,
   },
-  imageIcon: {
+  f: {
+    alignSelf: 'center',
+    fontSize: 25,
+  },
+  monkey: {
     width: 150,
     height: 150,
-    marginLeft: 95,
-  }
+    alignSelf: 'center',
+  },
+  ipt: {
+    alignSelf: 'center',
+    marginTop: 30,
+    justifyContent: 'center',
+    backgroundColor: '#a4cce8',
+    width: 80,
+    height: 40,
+    borderRadius: 20,
+  },
 });

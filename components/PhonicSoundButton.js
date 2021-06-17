@@ -1,64 +1,58 @@
 import * as React from 'react';
-import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+
 import { Audio } from 'expo-av';
 
 export default class PhonicSoundButton extends React.Component {
-   constructor(props){
-      super(props);
-      this.state = {
-        pressedButtonIndex: '',
-      }
-      
-    }
-  playSound = async soundChunk => {
-    console.log(soundChunk);
-    var soundLink =
-      'https://whitehatjrcontent.s3.ap-south-1.amazonaws.com/phones/' +
-      soundChunk +
-      '.mp3';
+  constructor(props) {
+    super(props);
+    this.state = { idk: '' };
+  }
+
+  playSound = async (word) => {
     await Audio.Sound.createAsync(
       {
-        uri: soundLink,
+        uri: 'https://s3-whitehatjrcontent.whjr.online/phones/' + word + '.mp3',
       },
-      { shouldPlay: true }
+      {
+        shouldPlay: true,
+      }
     );
   };
+
+  
+
   render() {
     return (
       <TouchableOpacity
         style={
-          this.props.buttonIndex === this.state.pressButtonIndex
-                      ? [styles.chunkButton, { backgroundColor: 'white' }]
-                      : [styles.chunkButton, { backgroundColor: 'red' }]
-          }
+          this.props.butonIndex === this.state.idk?
+          [styld.ipt,{backgroundColor: '#34f38d'}]
+          :
+          [styld.ipt,{backgroundColor: '#a4cce8'}]
+        }
         onPress={() => {
-          this.setState({ pressButtonIndex: this.props.buttonIndex });
-          this.playSound(this.props.soundChunk);
+          this.playSound(this.props.phonic);
+          this.setState({ idk: this.props.butonIndex });
         }}>
-        <Text style={
-          this.props.buttonIndex === this.state.pressButtonIndex
-                        ? [styles.displayText, { color: 'red' }]
-                        : [styles.displayText, { color: 'white' }]
-        }>{this.props.wordChunk}</Text>
+        <Text style={styld.f}> {this.props.chunks} </Text>
       </TouchableOpacity>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  displayText: {
-    textAlign: 'center',
-    fontSize: 30,
-    color: 'white'
-  },
-  chunkButton:{
-    width: '60%',
-    height: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
+const styld = StyleSheet.create({
+  f: {
     alignSelf: 'center',
-    borderRadius: 10,
-    margin: 5,
-    backgroundColor: 'red'
-  }
+    fontSize: 25,
+  },
+
+  ipt: {
+    alignSelf: 'center',
+    marginTop: 30,
+    justifyContent: 'center',
+    width: 80,
+    height: 40,
+    borderRadius: 20,
+  },
 });
