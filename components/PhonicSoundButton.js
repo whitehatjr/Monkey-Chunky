@@ -49,16 +49,16 @@ const styles = StyleSheet.create({
   displayText: {
     textAlign: 'center',
     fontSize: 30,
-    color: 'white'
+    color: 'black'
   },
   chunkButton:{
-    width: '60%',
+    width: '50%',
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
     borderRadius: 10,
     margin: 5,
-    backgroundColor: 'red'
+    backgroundColor: 'pink'
   }
 });
