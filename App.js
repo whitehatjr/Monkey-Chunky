@@ -81,12 +81,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#b8b8b8',
   },
   inputBox: {
-    marginTop: 50,
+    marginTop: 52,
     width: '80%',
     alignSelf: 'center',
     height: 40,
     textAlign: 'center',
-    borderWidth: 4,
+    borderWidth: 7,
     outline: 'none',
   },
   goButton: {
@@ -94,11 +94,11 @@ const styles = StyleSheet.create({
     height: 55,
     alignSelf: 'center',
     padding: 10,
-    margin: 10,
+    margin: 13,
   },
   buttonText: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 39,
     fontWeight: 'bold',
   },
   imageIcon: {
