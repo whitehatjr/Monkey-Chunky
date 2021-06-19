@@ -55,7 +55,7 @@ export default class App extends React.Component {
             this.setState({ chunks: db[word].chunks }),
             this.setState({ phonicSounds: db[word].phones })
             ):
-            Alert.alert("The word does not exist in our database");
+            alert("The word does not exist in our database");
           }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
@@ -83,10 +83,12 @@ const styles = StyleSheet.create({
   inputBox: {
     marginTop: 50,
     width: '80%',
+    height:40,
     alignSelf: 'center',
     height: 40,
     textAlign: 'center',
     borderWidth: 4,
+    borderRadius:20,
     outline: 'none',
   },
   goButton: {
@@ -95,6 +97,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     padding: 10,
     margin: 10,
+    backgroundColor:"blue"
   },
   buttonText: {
     textAlign: 'center',
