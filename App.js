@@ -11,10 +11,10 @@ import {
 import { Header } from 'react-native-elements';
 import db from './localdb';
 import PhonicSoundButton from './components/PhonicSoundButton';
-
+//i am cool and this is cool
 export default class App extends React.Component {
   constructor() {
-    super();
+    super(); 
     this.state = {
       text: '',
       chunks: [],
