@@ -29,7 +29,7 @@ export default class PhonicSoundButton extends React.Component {
         style={
           this.props.buttonIndex === this.state.pressButtonIndex
                       ? [styles.chunkButton, { backgroundColor: 'white' }]
-                      : [styles.chunkButton, { backgroundColor: 'red' }]
+                      : [styles.chunkButton, { backgroundColor: 'green' }]
           }
         onPress={() => {
           this.setState({ pressButtonIndex: this.props.buttonIndex });
@@ -37,7 +37,7 @@ export default class PhonicSoundButton extends React.Component {
         }}>
         <Text style={
           this.props.buttonIndex === this.state.pressButtonIndex
-                        ? [styles.displayText, { color: 'red' }]
+                        ? [styles.displayText, { color: 'green' }]
                         : [styles.displayText, { color: 'white' }]
         }>{this.props.wordChunk}</Text>
       </TouchableOpacity>
@@ -48,7 +48,7 @@ export default class PhonicSoundButton extends React.Component {
 const styles = StyleSheet.create({
   displayText: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 25,
     color: 'white'
   },
   chunkButton:{
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'center',
     borderRadius: 10,
-    margin: 5,
-    backgroundColor: 'red'
+    margin: 10,
+    backgroundColor: 'green'
   }
 });
