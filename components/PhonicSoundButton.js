@@ -45,20 +45,23 @@ export default class PhonicSoundButton extends React.Component {
   }
 }
 
-const styles = StyleSheet.create({
-  displayText: {
-    textAlign: 'center',
-    fontSize: 30,
-    color: 'white'
-  },
-  chunkButton:{
-    width: '60%',
-    height: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
+const styles = StyleSheet.create(
+{  
+  chunkButton: {
+    borderWidth: 1,
+   
+    width: 40,
+    height: 35,
     alignSelf: 'center',
-    borderRadius: 10,
-    margin: 5,
-    backgroundColor: 'red'
-  }
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 10,
+    borderRadius: 20,
+  },
+  displayText: {
+    color: 'white',
+    fontWeight: 'Bold',
+    fontFamily: 'algerian',
+    color: '#654138',
+  },
 });
