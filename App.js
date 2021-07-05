@@ -25,7 +25,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Header
-          backgroundColor={'#9c8210'}
+            backgroundColor="#36795a"
           centerComponent={{
             text: 'Monkey Chunky',
             style: { color: '#fff', fontSize: 20 },
@@ -59,7 +59,7 @@ export default class App extends React.Component {
           }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
-        <View>
+        <View style={{flexDirection:"row",alignSelf :"center",}}>
           {this.state.chunks.map((item, index) => {
             return (
               <PhonicSoundButton
@@ -76,34 +76,48 @@ export default class App extends React.Component {
 }
 
 const styles = StyleSheet.create({
+ 
   container: {
     flex: 1,
-    backgroundColor: '#b8b8b8',
+    backgroundColor: '#edfffc',
+    borderWidth:3,
+    borderColor:"#36795a"
   },
   inputBox: {
-    marginTop: 50,
-    width: '80%',
+    borderWidth: 2,
+    marginTop: 30,
+    width: 200,
+    height: 35,
     alignSelf: 'center',
-    height: 40,
-    textAlign: 'center',
-    borderWidth: 4,
-    outline: 'none',
   },
   goButton: {
-    width: '50%',
-    height: 55,
+    width: 80,
+    height: 80,
     alignSelf: 'center',
-    padding: 10,
-    margin: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 10,
+    borderRadius: 20,
   },
   buttonText: {
-    textAlign: 'center',
-    fontSize: 30,
-    fontWeight: 'bold',
+    color: 'white',
+    fontWeight: 'Bold',
   },
+
   imageIcon: {
     width: 150,
     height: 150,
-    marginLeft: 95,
-  }
+    alignSelf: 'center',
+    marginTop: 50,
+  },
+  chunkButton: {
+    borderWidth: 1,
+    backgroundColor: '#FACD34',
+    width: 40,
+    height: 35,
+    alignSelf: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 10,
+    borderRadius: 20,},
 });
