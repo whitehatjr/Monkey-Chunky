@@ -1,3 +1,4 @@
+/*This is a comment*/
 import * as React from 'react';
 import {
   Text,
