@@ -21,6 +21,7 @@ export default class App extends React.Component {
       phonicSounds: [],
     };
   }
+  //comment
   render() {
     return (
       <View style={styles.container}>
