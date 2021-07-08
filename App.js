@@ -47,6 +47,10 @@ export default class App extends React.Component {
           }}
           value={this.state.text}
         />
+
+        <TouchableOpacity onPress = { ()=> console.log("Hi")}>
+          <Text>Hi</Text>
+        </TouchableOpacity>
         <TouchableOpacity
           style={styles.goButton}
           onPress={() => {
