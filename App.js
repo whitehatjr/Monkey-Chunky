@@ -98,12 +98,12 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 28,
     fontWeight: 'bold',
   },
   imageIcon: {
-    width: 150,
+    width: 152,
     height: 150,
-    marginLeft: 95,
+    marginLeft: 92,
   }
 });
