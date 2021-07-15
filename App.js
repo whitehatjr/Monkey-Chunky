@@ -25,10 +25,10 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Header
-          backgroundColor={'#9c8210'}
+          backgroundColor={'red'}
           centerComponent={{
             text: 'Monkey Chunky',
-            style: { color: '#fff', fontSize: 20 },
+            style: { color: 'blue', fontSize: 20 },
           }}
         />
 
@@ -57,7 +57,7 @@ export default class App extends React.Component {
             ):
             Alert.alert("The word does not exist in our database");
           }}>
-          <Text style={styles.buttonText}>GO</Text>
+          <Text style={styles.buttonText}>PROCEED</Text>
         </TouchableOpacity>
         <View style={{flexDirection:"row",alignself:"center"}}>
           {this.state.chunks.map((item, index) => {
