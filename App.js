@@ -57,7 +57,8 @@ export default class App extends React.Component {
             ):
             Alert.alert("The word does not exist in our database");
           }}>
-          <Text style={styles.buttonText}>GO</Text>
+          <Text style={styles.buttonText}>Please Click On Go</Text>
+          <Text style={styles.buttonText}>Go</Text>
         </TouchableOpacity>
         <View>
           {this.state.chunks.map((item, index) => {
