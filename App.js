@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
   },
   inputBox: {
     marginTop: 50,
+    borderRadius: 20,
     width: '80%',
     alignSelf: 'center',
     height: 40,
