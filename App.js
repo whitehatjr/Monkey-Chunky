@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     height: 40,
     textAlign: 'center',
-    borderWidth: 4,
+    borderWidth: 5,
     outline: 'none',
   },
   goButton: {
@@ -104,6 +104,6 @@ const styles = StyleSheet.create({
   imageIcon: {
     width: 150,
     height: 150,
-    marginLeft: 95,
+    marginLeft: 94,
   }
 });
