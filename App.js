@@ -12,7 +12,7 @@ import {
 import { Header } from 'react-native-elements';
 import db from './localdb';
 import PhonicSoundButton from './components/PhonicSoundButton';
-
+// code by Sabitha 
 export default class App extends React.Component {
   constructor() {
     super();
@@ -102,6 +102,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 30,
     fontWeight: 'bold',
+    color:"White"
   },
   imageIcon: {
     width: 150,
