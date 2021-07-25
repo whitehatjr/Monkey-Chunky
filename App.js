@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
   inputBox: {
     marginTop: 50,
     width: '80%',
-    alignSelf: 'center',
+    alignSelf: 'left',
     height: 40,
     textAlign: 'center',
     borderWidth: 4,
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   imageIcon: {
-    width: 150,
+    width: 200,
     height: 150,
     marginLeft: 95,
   }
