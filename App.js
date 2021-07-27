@@ -25,10 +25,10 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Header
-          backgroundColor={'#9c8210'}
+          backgroundColor={'#9c8'}
           centerComponent={{
-            text: 'Monkey Chunky',
-            style: { color: '#fff', fontSize: 20 },
+            text: 'jungle Chunky',
+            style: { color: '#hhh', fontSize: 20 },
           }}
         />
 
@@ -36,7 +36,7 @@ export default class App extends React.Component {
           style={styles.imageIcon}
           source={{
             uri:
-              'https://www.shareicon.net/data/128x128/2015/08/06/80805_face_512x512.png',
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpt_cQG6HWoiPOxadDj3Sg6FEaTLt6tinPog&usqp=CAU',
           }}
         />
 
@@ -78,13 +78,13 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#b8b8b8',
+    backgroundColor: '#',
   },
   inputBox: {
     marginTop: 50,
     width: '80%',
     alignSelf: 'center',
-    height: 40,
+    height: 30,
     textAlign: 'center',
     borderWidth: 4,
     outline: 'none',
