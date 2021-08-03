@@ -22,6 +22,7 @@ export default class App extends React.Component {
     };
   }
   render() {
+    // some change
     return (
       <View style={styles.container}>
         <Header
