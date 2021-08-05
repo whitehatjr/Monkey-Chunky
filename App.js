@@ -62,7 +62,7 @@ export default class App extends React.Component {
         <View style={{flexDirection: "row" , alignSelf: "center"}}>
           {this.state.chunks.map((item, index) => {
             return (
-              <PhonicSoundButton
+              <PhonicSoundButton 
                 wordChunk={this.state.chunks[index]}
                 soundChunk={this.state.phonicSounds[index]}
                 buttonIndex={index}
