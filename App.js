@@ -25,10 +25,10 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Header
-          backgroundColor={'#9c8210'}
+          backgroundColor={'yellow'}
           centerComponent={{
             text: 'Monkey Chunky',
-            style: { color: '#fff', fontSize: 20 },
+            style: { color: '#fff', fontSize: 25 },
           }}
         />
 
@@ -82,11 +82,11 @@ const styles = StyleSheet.create({
   },
   inputBox: {
     marginTop: 50,
-    width: '80%',
+    width: '100%',
     alignSelf: 'center',
-    height: 40,
+    height: 50,
     textAlign: 'center',
-    borderWidth: 4,
+    borderWidth: 6,
     outline: 'none',
   },
   goButton: {
