@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     borderWidth: 4,
     outline: 'none',
     borderRadius: 10,
-    backgroundColor:'pink'
+    backgroundColor:'yellow'
   },
   goButton: {
     width: '50%',
