@@ -6,7 +6,8 @@ import {
   TextInput,
   TouchableOpacity,
   Image,
-  Alert
+  Alert,
+  ScrollView
 } from 'react-native';
 import { Header } from 'react-native-elements';
 import db from './localdb';
@@ -59,7 +60,7 @@ export default class App extends React.Component {
           }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
-        <View>
+        <ScrollView style={{flexDirection: "row"}} horizontal = {true}>
           {this.state.chunks.map((item, index) => {
             return (
               <PhonicSoundButton
@@ -69,7 +70,7 @@ export default class App extends React.Component {
               />
             );
           })}
-        </View>
+        </ScrollView>
       </View>
     );
   }
