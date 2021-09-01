@@ -28,7 +28,7 @@ export default class App extends React.Component {
           backgroundColor={'#9c8210'}
           centerComponent={{
             text: 'Monkey Chunky',
-            style: { color: '#fff', fontSize: 20 },
+            style: { color: '#fff', fontSize: 25 },
           }}
         />
 
@@ -51,11 +51,11 @@ export default class App extends React.Component {
           style={styles.goButton}
           onPress={() => {
             var word = this.state.text.toLowerCase().trim();
-            db[word]?(
-            this.setState({ chunks: db[word].chunks }),
-            this.setState({ phonicSounds: db[word].phones })
-            ):
-            Alert.alert("The word does not exist in our database");
+            db[word] ? (
+              this.setState({ chunks: db[word].chunks }),
+              this.setState({ phonicSounds: db[word].phones })
+            ) :
+              Alert.alert("The word does not exist in our database");
           }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
