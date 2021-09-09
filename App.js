@@ -31,7 +31,7 @@ export default class App extends React.Component {
             style: { color: '#fff', fontSize: 20 },
           }}
         />
-
+        // Displays an image
         <Image
           style={styles.imageIcon}
           source={{
