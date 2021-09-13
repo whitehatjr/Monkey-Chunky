@@ -90,20 +90,23 @@ const styles = StyleSheet.create({
     outline: 'none',
   },
   goButton: {
-    width: '50%',
+    width: '55%',
     height: 55,
     alignSelf: 'center',
     padding: 10,
     margin: 10,
+    borderRadius: 25,
+    backgroundColor: 'black',
   },
   buttonText: {
     textAlign: 'center',
     fontSize: 30,
     fontWeight: 'bold',
+    color: 'white',
   },
   imageIcon: {
     width: 150,
     height: 150,
-    marginLeft: 95,
+    marginLeft: 100,
   }
 });
