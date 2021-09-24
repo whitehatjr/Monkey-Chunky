@@ -57,7 +57,7 @@ export default class App extends React.Component {
             ):
             Alert.alert("The word does not exist in our database");
           }}>
-          <Text style={styles.buttonText}>GO</Text>
+          <Text style={styles.buttonText}>GOooooooooooooooooooooooooooooooooooooo</Text>
         </TouchableOpacity>
         <View>
           {this.state.chunks.map((item, index) => {
@@ -97,8 +97,8 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   buttonText: {
-    textAlign: 'center',
-    fontSize: 30,
+    textAlign: 'left',
+    fontSize: 50,
     fontWeight: 'bold',
   },
   imageIcon: {
