@@ -78,19 +78,19 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#b8b8b8',
+    backgroundColor: 'silver',
   },
   inputBox: {
     marginTop: 50,
     width: '80%',
     alignSelf: 'center',
-    height: 40,
+    height: 80,
     textAlign: 'center',
-    borderWidth: 4,
+    borderWidth: 3,
     outline: 'none',
   },
   goButton: {
-    width: '50%',
+    width: '100%',
     height: 55,
     alignSelf: 'center',
     padding: 10,
@@ -98,12 +98,12 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 35,
     fontWeight: 'bold',
   },
   imageIcon: {
     width: 150,
     height: 150,
-    marginLeft: 95,
+    marginLeft: 90,
   }
 });
