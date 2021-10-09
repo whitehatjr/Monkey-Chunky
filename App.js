@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from 'react';  
 import {
   Text,
   View,
@@ -87,6 +87,7 @@ const styles = StyleSheet.create({
     height: 40,
     textAlign: 'center',
     borderWidth: 4,
+    borderRadius:20,
     outline: 'none',
   },
   goButton: {
