@@ -100,6 +100,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 30,
     fontWeight: 'bold',
+    fontFamily:'Comic Sans MS'
   },
   imageIcon: {
     width: 150,
