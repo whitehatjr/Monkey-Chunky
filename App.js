@@ -1,3 +1,4 @@
+//added comments for testing
 import * as React from 'react';
 import {
   Text,
