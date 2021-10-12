@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {
-  Text,
+  Text,bob
   View,
   StyleSheet,
   TextInput,
