@@ -50,7 +50,7 @@ export default class App extends React.Component {
         <TouchableOpacity
           style={styles.goButton}
           onPress={() => {
-            var word = this.state.text.toLowerCase().trim();
+            var word = this.state.text.toLowerCase().trim().replaceAll(" ",'');
             db[word]?(
             this.setState({ chunks: db[word].chunks }),
             this.setState({ phonicSounds: db[word].phones })
@@ -59,7 +59,7 @@ export default class App extends React.Component {
           }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
-        <View>
+        <View style={{flexDirection:"row",alignSelf:"center"}}>
           {this.state.chunks.map((item, index) => {
             return (
               <PhonicSoundButton
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   },
   goButton: {
     width: '50%',
-    height: 55,
+    height: 50,
     alignSelf: 'center',
     padding: 10,
     margin: 10,
