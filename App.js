@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   },
   inputBox: {
     marginTop: 50,
-    width: '80%',
+    width: '10%',
     alignSelf: 'center',
     height: 40,
     textAlign: 'center',
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     outline: 'none',
   },
   goButton: {
-    width: '50%',
+    width: '2%',
     height: 55,
     alignSelf: 'center',
     padding: 10,
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 199,
     fontWeight: 'bold',
   },
   imageIcon: {
