@@ -81,19 +81,19 @@ const styles = StyleSheet.create({
     backgroundColor: '#b8b8b8',
   },
   inputBox: {
-    marginTop: 50,
+    marginTop: 80,
     width: '80%',
     alignSelf: 'center',
-    height: 40,
+    height: 60,
     textAlign: 'center',
-    borderWidth: 4,
+    borderWidth: 10,
     outline: 'none',
   },
   goButton: {
     width: '50%',
     height: 55,
     alignSelf: 'center',
-    padding: 10,
+    padding: 30,
     margin: 10,
   },
   buttonText: {
