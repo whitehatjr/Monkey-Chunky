@@ -11,6 +11,7 @@ import {
 import { Header } from 'react-native-elements';
 import db from './localdb';
 import PhonicSoundButton from './components/PhonicSoundButton';
+import * as Speech from 'expo-speech'
 
 export default class App extends React.Component {
   constructor() {
@@ -70,6 +71,13 @@ export default class App extends React.Component {
             );
           })}
         </View>
+        <TouchableOpacity onPress={()=>{
+          Speech.speak(this.state.text)
+        }}>
+          <Text>
+            {db[this.state.text]}
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   }
