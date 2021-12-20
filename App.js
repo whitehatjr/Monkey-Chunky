@@ -27,7 +27,7 @@ export default class App extends React.Component {
         <Header
           backgroundColor={'#9c8210'}
           centerComponent={{
-            text: 'Monkey Chunky',
+            text: 'Monkey Monkey Chunky',
             style: { color: '#fff', fontSize: 20 },
           }}
         />
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   },
   goButton: {
     width: '50%',
-    height: 55,
+    height: 50,
     alignSelf: 'center',
     padding: 10,
     margin: 10,
