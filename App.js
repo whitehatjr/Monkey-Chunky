@@ -90,6 +90,7 @@ const styles = StyleSheet.create({
     outline: 'none',
   },
   goButton: {
+    borderRadius:20,
     width: '50%',
     height: 55,
     alignSelf: 'center',
@@ -104,6 +105,6 @@ const styles = StyleSheet.create({
   imageIcon: {
     width: 150,
     height: 150,
-    marginLeft: 95,
+    marginLeft: 90,
   }
 });
