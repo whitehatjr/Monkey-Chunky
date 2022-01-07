@@ -21,6 +21,7 @@ export default class App extends React.Component {
       phonicSounds: [],
     };
   }
+  // some change
   render() {
     return (
       <View style={styles.container}>
@@ -78,10 +79,10 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#b8b8b8',
+    backgroundColor: 'yellow',
   },
   inputBox: {
-    marginTop: 50,
+    marginTop: 100,
     width: '80%',
     alignSelf: 'center',
     height: 40,
@@ -93,8 +94,8 @@ const styles = StyleSheet.create({
     width: '50%',
     height: 55,
     alignSelf: 'center',
-    padding: 10,
-    margin: 10,
+    padding: 20,
+    margin: 40,
   },
   buttonText: {
     textAlign: 'center',
