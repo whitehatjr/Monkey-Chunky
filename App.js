@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import { Header } from 'react-native-elements';
 import db from './localdb';
+import * as Speech from "expo-speech"
 import PhonicSoundButton from './components/PhonicSoundButton';
 
 export default class App extends React.Component {
@@ -25,7 +26,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Header
-          backgroundColor={'#9c8210'}
+          backgroundColor={'pink'}
           centerComponent={{
             text: 'Monkey Chunky',
             style: { color: '#fff', fontSize: 20 },
@@ -70,6 +71,13 @@ export default class App extends React.Component {
             );
           })}
         </View>
+        <TouchableOpacity onPress={()=>{
+          Speech.speak(this.state.text)
+        }} >
+          <Text>
+            {db[this.state.text]}
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -78,7 +86,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#b8b8b8',
+    backgroundColor: 'cream',
   },
   inputBox: {
     marginTop: 50,
