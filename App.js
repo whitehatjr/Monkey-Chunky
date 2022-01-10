@@ -31,7 +31,7 @@ export default class App extends React.Component {
             style: { color: '#fff', fontSize: 30 },
           }}
         />
-
+<View style={{flexDirection:"row"}} >
         <Image
           style={styles.imageIcon}
           source={{
@@ -39,7 +39,14 @@ export default class App extends React.Component {
               'https://www.shareicon.net/data/128x128/2015/08/06/80805_face_512x512.png',
           }}
         />
-
+        <Image
+          style={styles.imageIcon}
+          source={{
+            uri:
+              'https://www.shareicon.net/data/128x128/2015/08/06/80805_face_512x512.png',
+          }}
+        />
+</View>
         <TextInput
           style={styles.inputBox}
           onChangeText={text => {
