@@ -107,3 +107,4 @@ const styles = StyleSheet.create({
     marginLeft: 95,
   }
 });
+//bad boys
