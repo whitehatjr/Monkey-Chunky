@@ -28,7 +28,7 @@ export default class App extends React.Component {
           backgroundColor={'#9c8210'}
           centerComponent={{
             text: 'Monkey Chunky',
-            style: { color: '#fff', fontSize: 20 },
+            style: { color: '#fff', fontSize: 30, fontWeight:"bold" },
           }}
         />
 
@@ -86,19 +86,19 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     height: 40,
     textAlign: 'center',
-    borderWidth: 4,
+    borderWidth: 5,
     outline: 'none',
   },
   goButton: {
     width: '50%',
-    height: 55,
+    height: 60,
     alignSelf: 'center',
     padding: 10,
     margin: 10,
   },
   buttonText: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 35,
     fontWeight: 'bold',
   },
   imageIcon: {
