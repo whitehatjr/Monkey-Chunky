@@ -97,8 +97,8 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   buttonText: {
-    textAlign: 'center',
-    fontSize: 30,
+    textAlign: 'left',
+    fontSize: 50,
     fontWeight: 'bold',
   },
   imageIcon: {
