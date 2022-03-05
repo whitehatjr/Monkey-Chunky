@@ -28,8 +28,8 @@ export default class PhonicSoundButton extends React.Component {
       <TouchableOpacity
         style={
           this.props.buttonIndex === this.state.pressButtonIndex
-                      ? [styles.chunkButton, { backgroundColor: 'white' }]
-                      : [styles.chunkButton, { backgroundColor: 'red' }]
+                      ? [styles.chunkButton, { backgroundColor: 'pink' }]
+                      : [styles.chunkButton, { backgroundColor: 'blue' }]
           }
         onPress={() => {
           this.setState({ pressButtonIndex: this.props.buttonIndex });
