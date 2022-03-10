@@ -91,19 +91,19 @@ const styles = StyleSheet.create({
   },
   goButton: {
     width: '50%',
-    height: 55,
+    height: 45,
     alignSelf: 'center',
     padding: 10,
     margin: 10,
   },
   buttonText: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 45,
     fontWeight: 'bold',
   },
   imageIcon: {
     width: 150,
-    height: 150,
+    height: 200,
     marginLeft: 95,
   }
 });
