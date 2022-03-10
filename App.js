@@ -28,7 +28,7 @@ export default class App extends React.Component {
           backgroundColor={'#9c8210'}
           centerComponent={{
             text: 'Monkey Chunky',
-            style: { color: '#purple', fontSize: 20 },
+            style: { color: 'pink', fontSize: 25 },
           }}
         />
 
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   buttonText: {
     textAlign: 'center',
     fontSize: 30,
-    fontWeight: 'bold',
+    fontWeight: 'italic',
   },
   imageIcon: {
     width: 150,
