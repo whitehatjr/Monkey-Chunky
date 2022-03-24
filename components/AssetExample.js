@@ -6,7 +6,7 @@ export default class AssetExample extends React.Component {
     return (
       <View style={styles.container}>
         <Text style={styles.paragraph}>
-          Local files and assets can be imported by dragging and dropping them into the editor
+          Local files can be accessed easily
         </Text>
         <Image style={styles.logo} source={require('../assets/snack-icon.png')} />
       </View>
