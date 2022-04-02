@@ -59,7 +59,7 @@ export default class App extends React.Component {
           }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
-        <View>
+        <View style={styles.phonicbuttoncont}>
           {this.state.chunks.map((item, index) => {
             return (
               <PhonicSoundButton
@@ -98,12 +98,15 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 19,
     fontWeight: 'bold',
   },
   imageIcon: {
     width: 150,
     height: 150,
     marginLeft: 95,
+  },
+  phonicbuttoncont:{
+    flexDirection:'row'
   }
 });
