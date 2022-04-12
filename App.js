@@ -6,7 +6,8 @@ import {
   TextInput,
   TouchableOpacity,
   Image,
-  Alert
+  Alert,
+  ImageBackground
 } from 'react-native';
 import { Header } from 'react-native-elements';
 import db from './localdb';
@@ -24,6 +25,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+       
         <Header
           backgroundColor={'#9c8210'}
           centerComponent={{
@@ -44,6 +46,7 @@ export default class App extends React.Component {
           style={styles.inputBox}
           onChangeText={text => {
             this.setState({ text: text });
+            this.setState({ chunks:[]});
           }}
           value={this.state.text}
         />
@@ -70,6 +73,8 @@ export default class App extends React.Component {
             );
           })}
         </View>
+
+
       </View>
     );
   }
@@ -86,8 +91,8 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     height: 40,
     textAlign: 'center',
-    borderWidth: 4,
-    outline: 'none',
+    borderWidth: 4
+    
   },
   goButton: {
     width: '50%',
