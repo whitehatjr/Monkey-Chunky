@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
   },
   imageIcon: {
     width: 150,
-    height: 150,
+    height: 160,//change made
     marginLeft: 95,
   }
 });
