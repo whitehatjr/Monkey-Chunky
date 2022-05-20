@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
-import { Audio } from 'expo-av';
+import * as React from 'react'
+import { Text, View, TouchableOpacity, StyleSheet } from 'react-native'
+import { Audio } from 'expo-av'
 
 export default class PhonicSoundButton extends React.Component {
    constructor(props){
@@ -48,17 +48,17 @@ export default class PhonicSoundButton extends React.Component {
 const styles = StyleSheet.create({
   displayText: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 27,
     color: 'white'
   },
   chunkButton:{
-    width: '60%',
+    width: '68%',
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
     borderRadius: 10,
     margin: 5,
-    backgroundColor: 'red'
+    backgroundColor: 'blue'
   }
 });
