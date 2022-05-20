@@ -59,7 +59,7 @@ export default class App extends React.Component {
           }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
-        <View>
+        <View style ={{flexDirection:'row',alignSelf:'center'}}>
           {this.state.chunks.map((item, index) => {
             return (
               <PhonicSoundButton
@@ -83,6 +83,7 @@ const styles = StyleSheet.create({
   inputBox: {
     marginTop: 50,
     width: '80%',
+    borderRadius : 20,
     alignSelf: 'center',
     height: 40,
     textAlign: 'center',
