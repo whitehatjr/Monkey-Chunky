@@ -28,7 +28,7 @@ export default class App extends React.Component {
           backgroundColor={'#9c8210'}
           centerComponent={{
             text: 'Monkey Chunky',
-            style: { color: 'skyblue', fontSize: 22 }
+            style: { color: 'skyblue', fontSize: 20 }
           }}
         />
 
