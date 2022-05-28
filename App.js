@@ -82,9 +82,9 @@ const styles = StyleSheet.create({
   },
   inputBox: {
     marginTop: 50,
-    width: '80%',
+    width: '90%',
     alignSelf: 'center',
-    height: 40,
+    height: 90,
     textAlign: 'center',
     borderWidth: 4,
     outline: 'none',
@@ -104,6 +104,6 @@ const styles = StyleSheet.create({
   imageIcon: {
     width: 150,
     height: 150,
-    marginLeft: 95,
+	  marginLeft: 95,
   }
 });
