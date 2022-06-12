@@ -21,6 +21,7 @@ export default class App extends React.Component {
       phonicSounds: [],
     };
   }
+  
   render() {
     return (
       <View style={styles.container}>
@@ -98,7 +99,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: 'bold',
   },
   imageIcon: {
