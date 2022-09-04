@@ -36,7 +36,7 @@ export default class App extends React.Component {
           style={styles.imageIcon}
           source={{
             uri:
-              'https://www.shareicon.net/data/128x128/2015/08/06/80805_face_512x512.png',
+              'https://img.freepik.com/free-vector/cute-monkey-with-gadget_138676-3307.jpg?w=2000',
           }}
         />
 
@@ -78,7 +78,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#b8b8b8',
+    backgroundColor: '#CDEFFF',
   },
   inputBox: {
     marginTop: 50,
