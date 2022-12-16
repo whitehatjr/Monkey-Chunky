@@ -78,12 +78,12 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#b8b8b8',
+    backgroundColor: 'white',
   },
   inputBox: {
     marginTop: 50,
     width: '80%',
-    alignSelf: 'center',
+    alignSelf: 'left',
     height: 40,
     textAlign: 'center',
     borderWidth: 4,
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   imageIcon: {
-    width: 150,
+    width: 300,
     height: 150,
     marginLeft: 95,
   }
