@@ -27,7 +27,7 @@ export default class App extends React.Component {
         <Header
           backgroundColor={'#9c8210'}
           centerComponent={{
-            text: 'Monkey Chunky',
+            text: 'Monkey Chunky App',
             style: { color: '#fff', fontSize: 20 },
           }}
         />
@@ -99,7 +99,6 @@ const styles = StyleSheet.create({
   buttonText: {
     textAlign: 'center',
     fontSize: 30,
-    fontWeight: 'bold',
   },
   imageIcon: {
     width: 150,
