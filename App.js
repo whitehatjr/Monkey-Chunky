@@ -91,21 +91,21 @@ const styles = StyleSheet.create({
   },
   goButton: {
     width: 200,
-    height: 55,
+    height: 45,
     alignSelf: 'center',
     padding: 10,
     margin: 10,
   },
   buttonText: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: 'italic',
     fontFamily:'ariel',
     
   },
   imageIcon: {
-    width: 150,
-    height: 150,
-    marginLeft: 95,
+    width: 145,
+    height: 145,
+    marginLeft: 90,
   }
 });
