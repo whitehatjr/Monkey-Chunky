@@ -83,6 +83,7 @@ const styles = StyleSheet.create({
   inputBox: {
     marginTop: 50,
     width: '80%',
+    borderRadius: 20,
     alignSelf: 'center',
     height: 40,
     textAlign: 'center',
@@ -92,6 +93,7 @@ const styles = StyleSheet.create({
   goButton: {
     width: '50%',
     height: 55,
+    borderRadius: 20,
     alignSelf: 'center',
     padding: 10,
     margin: 10,
