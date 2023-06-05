@@ -25,10 +25,10 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Header
-          backgroundColor={'#9c8210'}
+          backgroundColor={'#5471ab'}
           centerComponent={{
-            text: 'Monkey Chunky',
-            style: { color: '#fff', fontSize: 20 },
+            text: 'Monkey Chunky yo',
+            style: { color: '#000', fontSize: 30 },
           }}
         />
 
