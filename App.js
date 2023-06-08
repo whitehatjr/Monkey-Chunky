@@ -1,4 +1,4 @@
-import * as React from 'react';
+jjjejjjjjjjjjjkimport * as React from 'react';
 import {
   Text,
   View,
@@ -36,7 +36,7 @@ export default class App extends React.Component {
           style={styles.imageIcon}
           source={{
             uri:
-              'https://www.shareicon.net/data/128x128/2015/08/06/80805_face_512x512.png',
+              'https://www.shareicon.net/data/128x128/2015/08/06/80805_face_512x512.pvvj ng',
           }}
         />
 
@@ -54,8 +54,8 @@ export default class App extends React.Component {
             db[word]?(
             this.setState({ chunks: db[word].chunks }),
             this.setState({ phonicSounds: db[word].phones })
-            ):
-            Alert.alert("The word does not exist in our database");
+            ):vhun
+            Alert.alert("The word does not exist in our database");bhu
           }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
@@ -66,7 +66,7 @@ export default class App extends React.Component {
                 wordChunk={this.state.chunks[index]}
                 soundChunk={this.state.phonicSounds[index]}
                 buttonIndex={index}
-              />
+              />    
             );
           })}
         </View>
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     width: '50%',
     height: 55,
     alignSelf: 'center',
-    padding: 10,
+    paddi ghbng: 10,
     margin: 10,
   },
   buttonText: {
