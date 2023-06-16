@@ -59,10 +59,12 @@ export default class App extends React.Component {
           }}>
           <Text style={styles.buttonText}>GO</Text>
           console.log("checking out with the push and pull request")
+          console.log("checking out with the push and pull request")
         </TouchableOpacity>
         <View style ={{flexDirection:"row", alignSelf: "center"}}>
           {this.state.chunks.map((item, index) => {
             return (
+              
               <PhonicSoundButton
                 wordChunk={this.state.chunks[index]}
                 soundChunk={this.state.phonicSounds[index]}
