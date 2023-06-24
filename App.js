@@ -11,6 +11,7 @@ import {
 import { Header } from 'react-native-elements';
 import db from './localdb';
 import PhonicSoundButton from './components/PhonicSoundButton';
+import { LinearGradient } from 'expo-linear-gradient';
 
 export default class App extends React.Component {
   constructor() {
@@ -24,13 +25,14 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header
-          backgroundColor={'#9c8210'}
-          centerComponent={{
-            text: 'Monkey Chunky',
-            style: { color: '#fff', fontSize: 20 },
-          }}
-        />
+          <LinearGradient
+            colors={['gray', '#777', '#333']}
+            start={[0, 0]}
+            end={[1, 0]}
+            style={styles.headerGradient}
+          >
+            <Text style={styles.headerText}>Monkey Chunky App</Text>
+          </LinearGradient>
 
         <Image
           style={styles.imageIcon}
