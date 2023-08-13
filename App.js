@@ -40,6 +40,7 @@ export default class App extends React.Component {
           }}
         />
 
+          
         <TextInput
           style={styles.inputBox}
           onChangeText={text => {
