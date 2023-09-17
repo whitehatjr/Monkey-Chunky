@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     width: '50%',
     height: 55,
     alignSelf: 'center',
-    padding: 10,
+    padding: 20,
     margin: 10,
   },
   buttonText: {
