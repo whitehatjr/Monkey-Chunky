@@ -78,27 +78,30 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#b8b8b8',
-  },
-  inputBox: {
-    marginTop: 50,
-    width: '80%',
-    alignSelf: 'center',
-    height: 40,
-    textAlign: 'center',
-    borderWidth: 4,
-    outline: 'none',
-  },
-  goButton: {
-    width: '50%',
-    height: 55,
-    alignSelf: 'center',
-    padding: 10,
     margin: 10,
   },
-  buttonText: {
+  inputBox: {
+    marginTop: 20,
+    width: '75%',
+    alignSelf: 'center',
+    height: 50,
     textAlign: 'center',
-    fontSize: 30,
+    outline: 'none',
+    fontFamily: 'Transport',
+    fontSize: 20,
+  },
+  goButton: {
+    backgroundColor: '#967bb6',
+    width: 100,
+    height: 100,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    borderRadius: 200
+  },
+  buttonText: {
+    fontFamily: 'Transport',
+    fontSize: 20,
     fontWeight: 'bold',
   },
   imageIcon: {

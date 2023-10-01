@@ -47,18 +47,17 @@ export default class PhonicSoundButton extends React.Component {
 
 const styles = StyleSheet.create({
   displayText: {
-    textAlign: 'center',
+    fontFamily: 'Transport',
     fontSize: 30,
-    color: 'white'
+    color: 'black'
   },
   chunkButton:{
-    width: '60%',
+    width: 100,
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
     borderRadius: 10,
-    margin: 5,
-    backgroundColor: 'red'
+    marginTop: 5,
   }
 });
