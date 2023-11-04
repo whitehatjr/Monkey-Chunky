@@ -55,11 +55,11 @@ export default class App extends React.Component {
             this.setState({ chunks: db[word].chunks }),
             this.setState({ phonicSounds: db[word].phones })
             ):
-            Alert.alert("The word does not exist in our database");
+            alert("The word does not exist in our database");
           }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
-        <View>
+        <View style = {{flexDirection:'row',alignSelf:'center'}}>
           {this.state.chunks.map((item, index) => {
             return (
               <PhonicSoundButton
@@ -88,21 +88,22 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     borderWidth: 4,
     outline: 'none',
+    borderRadius:20 
   },
   goButton: {
     width: '50%',
     height: 55,
     alignSelf: 'center',
     padding: 10,
-    margin: 10,
+    margin: 20,
   },
   buttonText: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: 'bold',
   },
   imageIcon: {
-    width: 150,
+    width: 250,
     height: 150,
     marginLeft: 95,
   }
