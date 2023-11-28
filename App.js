@@ -95,6 +95,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     padding: 10,
     margin: 10,
+    borderWidth:2, 
   },
   buttonText: {
     textAlign: 'center',
