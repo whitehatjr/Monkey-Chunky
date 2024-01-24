@@ -82,11 +82,11 @@ const styles = StyleSheet.create({
   },
   inputBox: {
     marginTop: 50,
-    width: '80%',
+    width: '100%',
     alignSelf: 'center',
-    height: 40,
+    height: 10,
     textAlign: 'center',
-    borderWidth: 4,
+    borderWidth: 2,
     outline: 'none',
   },
   goButton: {
