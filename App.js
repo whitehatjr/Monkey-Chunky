@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     padding: 10,
     margin: 10,
     backgroundColor: "orange",
-    
+    borderRadius: 10,
   },
   buttonText: {
     textAlign: 'center',
