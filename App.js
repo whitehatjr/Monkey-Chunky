@@ -25,7 +25,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Header
-          backgroundColor={'#9c8210'}
+           backgroundColor={'purple'}
           centerComponent={{
             text: 'Monkey Chunky',
             style: { color: '#fff', fontSize: 20 },
@@ -81,25 +81,27 @@ const styles = StyleSheet.create({
     backgroundColor: '#b8b8b8',
   },
   inputBox: {
-    marginTop: 50,
-    width: '80%',
-    alignSelf: 'center',
-    height: 40,
+    borderWidth: 2,
+    marginTop: 20,
+    height: 50,
+    borderColor: 'white',
+    borderRadius: 10,
     textAlign: 'center',
-    borderWidth: 4,
-    outline: 'none',
   },
   goButton: {
-    width: '50%',
-    height: 55,
     alignSelf: 'center',
-    padding: 10,
-    margin: 10,
+    marginTop: 40,
+    borderWidth: 2,
+    width: 140,
+    height: 30,
+    borderColor: 'white',
+    justifyContent: 'center',
+    borderRadius: 10,
   },
   buttonText: {
-    textAlign: 'center',
-    fontSize: 30,
-    fontWeight: 'bold',
+    fontSize: 20,
+    alignSelf: 'center',
+    color: 'purple',
   },
   imageIcon: {
     width: 150,
