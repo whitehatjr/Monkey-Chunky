@@ -1,3 +1,4 @@
+// add my comments here 
 import * as React from 'react';
 import {
   Text,
@@ -11,7 +12,7 @@ import {
 import { Header } from 'react-native-elements';
 import db from './localdb';
 import PhonicSoundButton from './components/PhonicSoundButton';
-
+// code by Sabitha 
 export default class App extends React.Component {
   constructor() {
     super();
@@ -25,7 +26,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Header
-          backgroundColor={'#9c8210'}
+          backgroundColor={'#9cab10'}
           centerComponent={{
             text: 'Monkey Chunky',
             style: { color: '#fff', fontSize: 20 },
@@ -59,7 +60,7 @@ export default class App extends React.Component {
           }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
-        <View>
+        <View style ={{flexDirection :"row",alignSelf:"center"}}>
           {this.state.chunks.map((item, index) => {
             return (
               <PhonicSoundButton
@@ -88,6 +89,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     borderWidth: 4,
     outline: 'none',
+    borderRadius:20
   },
   goButton: {
     width: '50%',
@@ -100,6 +102,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 30,
     fontWeight: 'bold',
+    color:"White"
   },
   imageIcon: {
     width: 150,
