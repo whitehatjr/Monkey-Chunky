@@ -25,7 +25,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Header
-          backgroundColor={'#9c8210'}
+          backgroundColor={'#B0C4DE'}
           centerComponent={{
             text: 'Monkey Chunky',
             style: { color: '#fff', fontSize: 20 },
@@ -55,7 +55,7 @@ export default class App extends React.Component {
             this.setState({ chunks: db[word].chunks }),
             this.setState({ phonicSounds: db[word].phones })
             ):
-            Alert.alert("The word does not exist in our database");
+            Alert.alert("Oops !! Sorry, the word is too advanced for the database.");
           }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
@@ -78,23 +78,24 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#b8b8b8',
+    backgroundColor: '#a8b8b8',
   },
   inputBox: {
     marginTop: 50,
-    width: '80%',
+    width: '90%',
     alignSelf: 'center',
-    height: 40,
+    height: 50,
     textAlign: 'center',
     borderWidth: 4,
     outline: 'none',
   },
   goButton: {
     width: '50%',
-    height: 55,
+    height: 75,
     alignSelf: 'center',
     padding: 10,
     margin: 10,
+    
   },
   buttonText: {
     textAlign: 'center',

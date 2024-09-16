@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     color: 'white'
   },
   chunkButton:{
-    width: '60%',
+    width: '75%',
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
