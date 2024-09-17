@@ -6,7 +6,6 @@ import {
   TextInput,
   TouchableOpacity,
   Image,
-  Alert
 } from 'react-native';
 import { Header } from 'react-native-elements';
 import db from './localdb';
@@ -49,14 +48,14 @@ export default class App extends React.Component {
         />
         <TouchableOpacity
           style={styles.goButton}
-          onPress={() => {
-            var word = this.state.text.toLowerCase().trim();
-            db[word]?(
-            this.setState({ chunks: db[word].chunks }),
-            this.setState({ phonicSounds: db[word].phones })
-            ):
-            Alert.alert("The word does not exist in our database");
-          }}>
+            onPress={() => {
+              var validWord = this.state.text.toLowerCase().trim();
+              db[validWord]?(
+                this.setState({ chunks: db[validWord].chunks }),
+                this.setState({ phonicSounds: db[validWord].phones })
+              ):
+              alert("Please enter another word")
+            }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
         <View>
