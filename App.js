@@ -6,7 +6,8 @@ import {
   TextInput,
   TouchableOpacity,
   Image,
-  Alert
+  Alert,
+  Button
 } from 'react-native';
 import { Header } from 'react-native-elements';
 import db from './localdb';
@@ -59,10 +60,10 @@ export default class App extends React.Component {
           }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
-        <View>
+        <View style={{flexDirection: "row" , alignSelf: "center"}}>
           {this.state.chunks.map((item, index) => {
             return (
-              <PhonicSoundButton
+              <PhonicSoundButton 
                 wordChunk={this.state.chunks[index]}
                 soundChunk={this.state.phonicSounds[index]}
                 buttonIndex={index}
@@ -87,6 +88,7 @@ const styles = StyleSheet.create({
     height: 40,
     textAlign: 'center',
     borderWidth: 4,
+    borderRadius: 35,
     outline: 'none',
   },
   goButton: {
