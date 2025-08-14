@@ -1,4 +1,4 @@
-# Monkey Chunky App: React Native Phonics App -2021
+# Monkey Chunky App: React Native Phonics App -2020
 
 > ⚠️ Note: This is a very old React Native project, built early in your learning journey.
 > It may require updating dependencies or React Native versions to run on modern setups.
